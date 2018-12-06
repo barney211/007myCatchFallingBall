@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接落球游戏</title>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+         .controlBlock{
+             width:700px;
+             height:100px;
+             padding:20px;
+             display: flex;
+         }
+        .btn{
+            width:130px;
+            height:80px;
+            border-radius: 5px;
+            line-height: 80px;
+            text-align: center;
+            color:#FFF;
+            margin-right:35px;
+            font-size: 39px;
+        }
+        .score{
+            height:80px;
+            line-height: 80px;
+            font-size: 30px;
+        }
+        .canvasBlock{
+            border: 1px solid black;
+            display: block;
+            position: relative;
+            width:702px;
+            height:802px;
+        }
+        #myChart{
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 10
+        }
+        #bombChart{
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 9
+        }
+        #ballChart{
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .gameOver{
+            width:400px;
+            height:300px;
+            border-radius: 50%;
+            background: #F78989;
+            color:#fff;
+            text-align: center;
+            position: absolute;
+            top:300px;
+            left:150px;
+            font-size: 35px;
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="controlBlock">
+         <div class="btn" style="background:#85CE61;" onclick="startGame()">开始</div>
+         <div class="btn" style="background:#F78989 " onclick="resetGame()">重置</div>
+         <div class="score">得分:0000</div>
+    </div>
+    <div class="canvasBlock">
+        <canvas id="myChart" width="700" height="800">
+        </canvas>
+        <canvas id="ballChart" width="700" height="800">
+        </canvas>
+        <canvas id="bombChart"  width="700" height="800">
+        </canvas>
+    </div>
+    <div class="gameOver">
+        <div style="margin-top: 80px;">Game Over</div>
+        <div class="finalScore">得分:456</div>
+    </div>
+    <div></div>
+
+
+    <script type="text/javascript" src="./js/myCatchFallingBall.js"></script>
+</body>
+</html>
